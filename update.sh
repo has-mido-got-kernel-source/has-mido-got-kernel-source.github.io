@@ -8,7 +8,7 @@ rm index_no.html
 echo "$TIME" >update_time
 git add .
 git commit -m "Updated. ${TIME}"
-git push
+git push --force
 }
 do_update(){
 git pull
@@ -16,7 +16,7 @@ git reset --hard HEAD^
 echo "$TIME" >update_time
 git add .
 git commit -m "Updated. ${TIME}"
-git push
+git push --force
 }
 cd has-mido-got-kernel-source.github.io
 [ -f index_no.html ] || exit 0
